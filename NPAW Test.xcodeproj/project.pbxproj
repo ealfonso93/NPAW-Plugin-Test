@@ -15,6 +15,9 @@
 		78B631BE1ED1E46900F65108 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78B631BC1ED1E46900F65108 /* LaunchScreen.storyboard */; };
 		78B631C91ED1E46A00F65108 /* NPAW_TestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B631C81ED1E46A00F65108 /* NPAW_TestTests.m */; };
 		78B631D41ED1E46A00F65108 /* NPAW_TestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B631D31ED1E46A00F65108 /* NPAW_TestUITests.m */; };
+		78B632251ED1F33C00F65108 /* PlayerControllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B632241ED1F33C00F65108 /* PlayerControllViewController.m */; };
+		78B6322E1ED2080800F65108 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B6322D1ED2080800F65108 /* AVFoundation.framework */; };
+		78B632361ED20C2800F65108 /* libPlugin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B632281ED2069C00F65108 /* libPlugin.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,11 @@
 		78B631CF1ED1E46A00F65108 /* NPAW TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NPAW TestUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78B631D31ED1E46A00F65108 /* NPAW_TestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NPAW_TestUITests.m; sourceTree = "<group>"; };
 		78B631D51ED1E46A00F65108 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78B6321F1ED1F22F00F65108 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		78B632231ED1F33C00F65108 /* PlayerControllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerControllViewController.h; sourceTree = "<group>"; };
+		78B632241ED1F33C00F65108 /* PlayerControllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerControllViewController.m; sourceTree = "<group>"; };
+		78B632281ED2069C00F65108 /* libPlugin.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPlugin.a; sourceTree = "<group>"; };
+		78B6322D1ED2080800F65108 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78B632361ED20C2800F65108 /* libPlugin.a in Frameworks */,
+				78B6322E1ED2080800F65108 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,10 +91,13 @@
 		78B631A21ED1E46800F65108 = {
 			isa = PBXGroup;
 			children = (
+				78B632281ED2069C00F65108 /* libPlugin.a */,
+				78B6321C1ED1F0EB00F65108 /* Plugin */,
 				78B631AD1ED1E46900F65108 /* NPAW Test */,
 				78B631C71ED1E46A00F65108 /* NPAW TestTests */,
 				78B631D21ED1E46A00F65108 /* NPAW TestUITests */,
 				78B631AC1ED1E46900F65108 /* Products */,
+				78B6321E1ED1F22F00F65108 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +123,8 @@
 				78B631BC1ED1E46900F65108 /* LaunchScreen.storyboard */,
 				78B631BF1ED1E46900F65108 /* Info.plist */,
 				78B631AE1ED1E46900F65108 /* Supporting Files */,
+				78B632231ED1F33C00F65108 /* PlayerControllViewController.h */,
+				78B632241ED1F33C00F65108 /* PlayerControllViewController.m */,
 			);
 			path = "NPAW Test";
 			sourceTree = "<group>";
@@ -138,6 +153,23 @@
 				78B631D51ED1E46A00F65108 /* Info.plist */,
 			);
 			path = "NPAW TestUITests";
+			sourceTree = "<group>";
+		};
+		78B6321C1ED1F0EB00F65108 /* Plugin */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Plugin;
+			path = ../Plugin/Plugin;
+			sourceTree = "<group>";
+		};
+		78B6321E1ED1F22F00F65108 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				78B6322D1ED2080800F65108 /* AVFoundation.framework */,
+				78B6321F1ED1F22F00F65108 /* AVKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +307,7 @@
 			files = (
 				78B631B61ED1E46900F65108 /* ViewController.m in Sources */,
 				78B631B31ED1E46900F65108 /* AppDelegate.m in Sources */,
+				78B632251ED1F33C00F65108 /* PlayerControllViewController.m in Sources */,
 				78B631B01ED1E46900F65108 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,22 +458,38 @@
 		78B631D91ED1E46A00F65108 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = $SOURCE_ROOT/include;
 				INFOPLIST_FILE = "NPAW Test/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ealfonso.NPAW-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
 		78B631DA1ED1E46A00F65108 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = $SOURCE_ROOT/include;
 				INFOPLIST_FILE = "NPAW Test/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ealfonso.NPAW-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};
